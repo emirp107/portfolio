@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Automateによる遅延アラート構築 | 改善実績</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/sections/results-detail.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="./index.html" class="nav__logo">
+                <span class="logo-mark">◆</span>
+                Portfolio
+            </a>
+            <a href="./index.html#results" class="nav__link">
+                <i data-lucide="arrow-left" style="width: 16px; vertical-align: middle;"></i>
+                実績一覧へ戻る
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-hero">
+            <div class="container">
+                <span class="detail-hero__tag">Power Automate</span>
+                <h1 class="detail-hero__title">Power Automateによる<br>遅延アラート構築</h1>
+
+                <div class="detail-hero__stats">
+                    <div class="detail-stat">
+                        <span class="detail-stat__value">0</span>
+                        <span class="detail-stat__label">処理遅延</span>
+                    </div>
+                    <div class="detail-stat">
+                        <span class="detail-stat__value">24<small>h</small></span>
+                        <span class="detail-stat__label">自動監視</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="story">
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Background</span>
+                    <h2 class="story__title">「期限切れ」まで気づけない管理体制</h2>
+                    <p class="story__text">
+                        経費集計や各種申請業務において、担当者が抱えている案件の期限管理は個人の裁量に委ねられていました。
+                        そのため、多忙な時期には処理が漏れ、<strong>「期限が過ぎてから上長が気づく」</strong>といった事態が散発。
+                        再発防止策として、人手に頼らない自動的なチェック機能が求められていました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Challenge</span>
+                    <h2 class="story__title">バラバラな情報の集約が最大の課題</h2>
+                    <p class="story__text">
+                        自動監視を行うためには、まず「何が」「いつまでか」というデータが統一された形式で存在している必要があります。
+                        前段階として取り組んだ<strong>「経費台帳の書式統一」</strong>があったからこそ、それをソースとして自動実行するフローを構築する準備が整いました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Solution</span>
+                    <h2 class="story__title">Power Automateによる「先回り」のアラート配信</h2>
+                    <p class="story__text">
+                        Power Automateを活用し、クラウド上の経費台帳を定期的にスキャンするフローを構築。
+                        <strong>「処理期限が3日以内に迫っている案件」</strong>および<strong>「期限を過ぎた未処理案件」</strong>を自動で抽出します。
+                        対象となる担当者本人だけでなく、上長のアドレス宛にもアラートメールを同時送信し、組織全体で見守る仕組みを作りました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Result</span>
+                    <h2 class="story__title">処理遅延ゼロの達成と、心理的な安心感</h2>
+                    <p class="story__text">
+                        アラートの導入後、<strong>処理遅延はほぼゼロ</strong>に。担当者は「漏れていないか」を常に不安に思う必要がなくなり、リマインドに頼らず作業のリズムを作れるようになりました。
+                        また、上長も進捗確認の手間が減り、異常値にだけ即座に反応できる効率的なマネジメント体制へと変化しました。
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="back-to-home">
+            <a href="./index.html#results" class="btn btn--back">
+                <i data-lucide="home" class="btn__icon"></i>
+                TOPへ
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy" style="text-align: center;">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

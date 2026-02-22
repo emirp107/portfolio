@@ -1,0 +1,215 @@
+/* ========== Results & Services Sections — v2 ========== */
+
+/* ------- Results (数字カード) ------- */
+.results {
+    background: var(--color-bg-alt);
+}
+
+.results__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.result-card {
+    background: var(--color-card);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.result-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    color: var(--color-white);
+}
+
+.result-card__icon--shinbashi {
+    background: var(--color-shinbashi);
+}
+
+.result-card__icon--aotake {
+    background: var(--color-aotake);
+}
+
+.result-card__icon--toki {
+    background: var(--color-toki);
+}
+
+.result-card__icon--choujiro {
+    background: var(--color-choujiro);
+}
+
+.result-card__number {
+    font-family: var(--font-accent);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.result-card__text-num {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.result-card__unit {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-left: 2px;
+}
+
+.result-card__label {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-shinbashi);
+    margin-bottom: var(--space-sm);
+}
+
+.result-card__desc {
+    font-size: 13px;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.result-card__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-shinbashi);
+    margin-top: auto;
+}
+
+.result-card__more i {
+    width: 14px;
+    height: 14px;
+}
+
+.result-card__desc small {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* ------- Services (できること) ------- */
+.services {
+    background: var(--color-bg);
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.service-card {
+    background: var(--color-card);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+}
+
+.service-card__icon--shinbashi {
+    background: var(--color-shinbashi);
+}
+
+.service-card__icon--aotake {
+    background: var(--color-aotake);
+}
+
+.service-card__icon--toki {
+    background: var(--color-toki);
+}
+
+.service-card__icon--choujiro {
+    background: var(--color-choujiro);
+}
+
+.service-card__title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+}
+
+.service-card__solution {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-shinbashi);
+    margin-bottom: var(--space-md);
+}
+
+.service-card__desc {
+    font-size: 13px;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .results__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .results__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-card {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .result-card__number {
+        font-size: 28px;
+    }
+}

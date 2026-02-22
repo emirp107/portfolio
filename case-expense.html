@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>経費集計のリアルタイム化 | 改善実績</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/sections/results-detail.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="./index.html" class="nav__logo">
+                <span class="logo-mark">◆</span>
+                Portfolio
+            </a>
+            <a href="./index.html#results" class="nav__link">
+                <i data-lucide="arrow-left" style="width: 16px; vertical-align: middle;"></i>
+                実績一覧へ戻る
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-hero">
+            <div class="container">
+                <span class="detail-hero__tag">Excel / 業務改善</span>
+                <h1 class="detail-hero__title">経費集計のリアルタイム化</h1>
+
+                <div class="detail-hero__stats">
+                    <div class="detail-stat">
+                        <span class="detail-stat__value">50h<small>/月</small></span>
+                        <span class="detail-stat__label">工数削減</span>
+                    </div>
+                    <div class="detail-stat">
+                        <span class="detail-stat__value">100<small>名規模</small></span>
+                        <span class="detail-stat__label">対象部門</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="story">
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Background</span>
+                    <h2 class="story__title">「バラバラの書式」が招く集計の限界</h2>
+                    <p class="story__text">
+                        各課ごとに異なる方法（手計算、独自のグラフ、古いマクロなど）で行われていた経費集計。
+                        部門全体の数字を把握するためには、各課から上がってくるバラバラなファイルを転記・加工する必要があり、リアルタイムでの状況把握が困難でした。また、データ量が増えるとファイルが損壊することも頻発していました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Challenge</span>
+                    <h2 class="story__title">技術ではなく「運用の共通化」という壁</h2>
+                    <p class="story__text">
+                        単に高度なシステムを導入するのではなく、現場の誰もが使いこなせ、かつメンテナンスしやすい仕組みが必要でした。
+                        複雑なマクロはブラックボックス化やエラーの原因になるため、<strong>「あえてマクロを使わない」</strong>という制約のもとで、堅牢な集計ロジックを組むことが求められました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Solution</span>
+                    <h2 class="story__title">関数のみで構築した「リアルタイム集計シート」</h2>
+                    <p class="story__text">
+                        経費台帳そのものの書式を根本から見直し。入力規則の徹底と関数による参照を組み合わせることで、
+                        <strong>入力したその瞬間に費目ごとの合算値やグラフが更新される</strong>「集計シート」を作成しました。
+                        特定のスキルがなくても保守できるようシンプルな構造に徹し、各課の書式を統一した共通テンプレートとして展開しました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Result</span>
+                    <h2 class="story__title">月50時間の削減と、壊れない基盤の構築</h2>
+                    <p class="story__text">
+                        書式の統一により、月次報告のための転記作業がほぼゼロに。部門全体で月間<strong>50時間の工数削減</strong>につながりました。
+                        書式を揃えたことで他部門との比較も容易になり、経営判断のスピードも向上。
+                        また、仕組みを簡略化したことで「昨日まで動いていたファイルが突然開かない」といったトラブルも大幅に解消されました。
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="back-to-home">
+            <a href="./index.html#results" class="btn btn--back">
+                <i data-lucide="home" class="btn__icon"></i>
+                TOPへ
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy" style="text-align: center;">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

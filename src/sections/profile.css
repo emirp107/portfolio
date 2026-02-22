@@ -1,0 +1,131 @@
+/* ========== Profile Section — v2 ========== */
+.profile {
+    background: var(--color-bg);
+}
+
+.profile__grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.profile__avatar-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.profile__avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--color-card);
+    flex-shrink: 0;
+}
+
+.profile__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile__avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-shinbashi-light), var(--color-aotake-light));
+}
+
+.profile__avatar-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--color-shinbashi);
+    opacity: 0.5;
+}
+
+.profile__card {
+    background: var(--color-card);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl) var(--space-2xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+}
+
+.profile__role {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    color: var(--color-shinbashi);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-sm);
+}
+
+.profile__divider {
+    width: 40px;
+    height: 2px;
+    background: var(--color-shinbashi);
+    border-radius: 2px;
+    margin: var(--space-md) 0 var(--space-lg);
+}
+
+.profile__bio {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+}
+
+.profile__bio:last-of-type {
+    margin-bottom: var(--space-lg);
+}
+
+.profile__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md) var(--space-xl);
+}
+
+.profile__detail-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+.profile__detail-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--color-shinbashi);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .profile__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+        text-align: center;
+    }
+
+    .profile__avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile__card {
+        padding: var(--space-lg);
+    }
+
+    .profile__details {
+        justify-content: center;
+    }
+
+    .profile__divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

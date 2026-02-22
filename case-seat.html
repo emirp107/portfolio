@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Appsによる座席管理アプリ | 改善実績</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/sections/results-detail.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="./index.html" class="nav__logo">
+                <span class="logo-mark">◆</span>
+                Portfolio
+            </a>
+            <a href="./index.html#results" class="nav__link">
+                <i data-lucide="arrow-left" style="width: 16px; vertical-align: middle;"></i>
+                実績一覧へ戻る
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-hero">
+            <div class="container">
+                <span class="detail-hero__tag">Power Apps / DX</span>
+                <h1 class="detail-hero__title">Power Appsによる<br>座席管理アプリ</h1>
+
+                <div class="detail-hero__stats">
+                    <div class="detail-stat">
+                        <span class="detail-stat__value">アプリ化</span>
+                        <span class="detail-stat__label">Excel脱却</span>
+                    </div>
+                    <div class="detail-stat">
+                        <span class="detail-stat__value">Free</span>
+                        <span class="detail-stat__label">アドレス対応</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="story">
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Background</span>
+                    <h2 class="story__title">「Excel方眼紙」で作られた座席表の限界</h2>
+                    <p class="story__text">
+                        オフィスの座席図はExcelのセルを細かく調整した、いわゆる「Excel方眼紙」で管理されていました。
+                        フリーアドレス制の導入に伴い、<strong>「誰がどこに座っているか」「出社しているのか在宅なのか」</strong>をリアルタイムに把握する必要が出てきましたが、共有ファイルを都度編集する運用では限界がありました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Challenge</span>
+                    <h2 class="story__title">誰でも直感的に使える「スピード」と「操作性」</h2>
+                    <p class="story__text">
+                        出社時にわざわざPCを開き、重いExcelファイルを編集するのは手間がかかります。
+                        スマホからQRコードを読み取るだけで即座にチェックインでき、かつ管理者側ではデータが自動集計される仕組みを、いかに低コストで実現するかが課題でした。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Solution</span>
+                    <h2 class="story__title">Power Appsによるチェックイン/アウト機能</h2>
+                    <p class="story__text">
+                        Power Appsを活用し、スマホ対応の座席管理アプリを自社開発。
+                        <strong>「チェックイン・アウト」ボタン一つでステータスが更新</strong>され、グラフィカルな座席マップ上に反映されます。
+                        裏側ではDataverse（またはSharePoint）をデータベースとして連携。これにより、単なる座席管理だけでなく、組織全体の課員情報管理ツールとしても機能するよう設計しました。
+                    </p>
+                </div>
+
+                <div class="story__item animate-on-scroll">
+                    <span class="story__label">Result</span>
+                    <h2 class="story__title">「誰がどこに？」の迷いが消えたオフィス</h2>
+                    <p class="story__text">
+                        アプリの導入により、フリーアドレス運用が劇的にスムーズになりました。
+                        <strong>「出社か在宅か」がひと目で分かる</strong>ようになったことで、対面でのコミュニケーションのタイミングを逃さなくなり、チームの連携が強化。
+                        また、Excel方眼紙のメンテナンスから解放され、人事異動に伴う座席変更なども瞬時に反映される「生きたデータ」へと進化しました。
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="back-to-home">
+            <a href="./index.html#results" class="btn btn--back">
+                <i data-lucide="home" class="btn__icon"></i>
+                TOPへ
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy" style="text-align: center;">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
