@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>経歴・スキル | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/sections/profile-detail.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="./index.html" class="nav__logo">
+                <span class="logo-mark">◆</span>
+                Portfolio
+            </a>
+            <a href="./index.html#profile" class="nav__link">
+                <i data-lucide="arrow-left" style="width: 16px; vertical-align: middle;"></i>
+                背面に戻る
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-detail-hero">
+            <div class="container">
+                <h1 class="profile-detail-hero__title">Profile & Skills</h1>
+                <p class="profile-detail-hero__subtitle">現場の「困りごと」を仕組みで解決する実務家として</p>
+            </div>
+        </section>
+
+        <section class="career-section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">My Journey</span>
+                    <h2 class="section__title">これまでの歩み</h2>
+                </div>
+
+                <div class="career-timeline">
+                    <div class="career-item animate-on-scroll">
+                        <h3 class="career-item__title">デザイン・営業職時代</h3>
+                        <p class="career-item__text">
+                            キャリアのスタートはデザインと営業職。顧客の要望を形にする力と、現場の意向を汲み取るコミュニケーションの基礎を磨きました。
+                        </p>
+                    </div>
+
+                    <div class="career-item animate-on-scroll">
+                        <h3 class="career-item__title">出産・育児を経て事務職へ復帰</h3>
+                        <p class="career-item__text">
+                            ライフイベントを経て事務職として社会復帰。限られた時間の中でパフォーマンスを出すため、日々のルーティンワークの効率化に意識が向くようになります。
+                        </p>
+                    </div>
+
+                    <div class="career-item animate-on-scroll">
+                        <h3 class="career-item__title">Excel VBAとの出会いと独学</h3>
+                        <p class="career-item__text">
+                            「もっと楽に、正確に仕事を進めたい」という思いからExcel VBAを独学で習得。
+                            身近な業務の自動化を一つずつ実践し、周囲からも喜ばれる仕組み作りの楽しさに目覚めました。
+                        </p>
+                    </div>
+
+                    <div class="career-item animate-on-scroll">
+                        <h3 class="career-item__title">現在：製造業でのDX・RPA推進</h3>
+                        <p class="career-item__text">
+                            現在は製造業の現場にて、業務改善とRPA推進を専任で担当。
+                            Excelマクロ、Power Platform、UiPathなどを駆使し、技術ありきではない「現場が本当に使い続けられる」自動化を追求しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Skills</span>
+                    <h2 class="section__title">できること・技術スタック</h2>
+                </div>
+
+                <!-- 業務改善・RPA -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category__header">
+                        <i data-lucide="cpu" class="skill-category__icon"></i>
+                        <h3 class="skill-category__title">業務改善・RPA</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-card">
+                            <span class="skill-card__name">Excel VBA</span>
+                            <p class="skill-card__desc">
+                                新規ツールの作成から、既存マクロの保守・改修まで幅広く対応。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">Power Automate</span>
+                            <p class="skill-card__desc">
+                                クラウドフロー・デスクトップフロー共に10本以上の実稼働実績。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">Power Apps</span>
+                            <p class="skill-card__desc">
+                                現場の入力フォームや管理アプリの構築。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">UiPath</span>
+                            <p class="skill-card__desc">
+                                ID・アクセス権管理の自動化など、エンタープライズ領域の自動化。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">Power Query</span>
+                            <p class="skill-card__desc">
+                                大量データの加工・クレンジングの効率化。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 設計・開発基礎 -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category__header">
+                        <i data-lucide="code-2" class="skill-category__icon"></i>
+                        <h3 class="skill-category__title">設計・開発基礎</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-card">
+                            <span class="skill-card__name">オブジェクト指向の基礎</span>
+                            <p class="skill-card__desc">
+                                保守性の高いコードを書くための基礎知識を保持。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">Selenium / Scraping</span>
+                            <p class="skill-card__desc">
+                                Webからのデータ収集自動化。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">PHP (Laravel)</span>
+                            <p class="skill-card__desc">
+                                Webアプリケーション開発の基礎。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">JavaScript (Next.js / Vue.js)</span>
+                            <p class="skill-card__desc">
+                                フロントエンド開発への理解。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">SQL</span>
+                            <p class="skill-card__desc">
+                                データベースからの抽出・連携。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 業務スキル -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category__header">
+                        <i data-lucide="briefcase" class="skill-category__icon"></i>
+                        <h3 class="skill-category__title">業務スキル</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-card">
+                            <span class="skill-card__name">業務フロー整理・要件定義</span>
+                            <p class="skill-card__desc">
+                                カオスな現場作業を紐解き、仕組み化できる形に整理します。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">ヘルプデスク・社内教育</span>
+                            <p class="skill-card__desc">
+                                作ったものを「使いこなしてもらう」ための伴走支援。
+                            </p>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-card__name">仕様書・マニュアル作成</span>
+                            <p class="skill-card__desc">
+                                属人化を防ぎ、将来の保守を見据えたドキュメント作成。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-home"
+            style="position: fixed; bottom: var(--space-xl); right: var(--space-xl); z-index: 100;">
+            <a href="./index.html" class="btn btn--primary">
+                <i data-lucide="home" class="btn__icon"></i>
+                TOPへ戻る
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center;">
+            <p class="footer__copy">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

@@ -13,6 +13,7 @@ export default defineConfig({
                 expense: resolve(__dirname, 'case-expense.html'),
                 alert: resolve(__dirname, 'case-alert.html'),
                 seat: resolve(__dirname, 'case-seat.html'),
+                profile: resolve(__dirname, 'profile-detail.html'),
             },
         },
     },
