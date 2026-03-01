@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Automate 経費承認ワークフロー | Showcase</title>
+    <meta name="description" content="Power Automateで構築した経費承認ワークフローのデモ。Forms申請→自動承認→Teams通知→SharePoint記録の一連のフローを紹介。" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/sections/works.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="./index.html" class="nav__logo">
+                <span class="logo-mark">◆</span>
+                Portfolio
+            </a>
+            <a href="./index.html#works" class="nav__link">
+                <i data-lucide="arrow-left" style="width: 16px; vertical-align: middle;"></i>
+                Works一覧へ戻る
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========== Showcase Hero ========== -->
+        <section class="showcase-hero">
+            <div class="container">
+                <div class="showcase-hero__badges">
+                    <span class="showcase-hero__badge showcase-hero__badge--pa">
+                        <i data-lucide="zap" style="width: 14px; height: 14px;"></i>
+                        Power Automate
+                    </span>
+                    <span class="showcase-hero__badge showcase-hero__badge--forms">
+                        <i data-lucide="file-text" style="width: 14px; height: 14px;"></i>
+                        Forms
+                    </span>
+                    <span class="showcase-hero__badge showcase-hero__badge--teams">
+                        <i data-lucide="message-square" style="width: 14px; height: 14px;"></i>
+                        Teams
+                    </span>
+                    <span class="showcase-hero__badge showcase-hero__badge--sp">
+                        <i data-lucide="database" style="width: 14px; height: 14px;"></i>
+                        SharePoint
+                    </span>
+                </div>
+                <h1 class="showcase-hero__title">経費承認ワークフロー</h1>
+                <p class="showcase-hero__subtitle">
+                    Microsoft Formsでの申請から、承認・通知・記録まで<br />
+                    <strong>すべてを自動化</strong>するPower Automateフロー
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== Demo Video Section ========== -->
+        <section class="showcase-demo section" id="demo">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__tag">Demo</span>
+                    <h2 class="section__title">デモ動画</h2>
+                </div>
+                <div class="showcase-demo__player animate-on-scroll">
+                    <video id="demo-video" class="showcase-demo__video" controls preload="metadata" poster="">
+                        <source src="./public/expense-approval-demo.mp4" type="video/mp4" />
+                    </video>
+                    <!-- Placeholder overlay (shown when video is not available) -->
+                    <div class="showcase-demo__placeholder" id="demo-placeholder">
+                        <i data-lucide="play-circle" class="showcase-demo__placeholder-icon"></i>
+                        <p class="showcase-demo__placeholder-text">デモ動画 準備中</p>
+                        <p class="showcase-demo__placeholder-sub">Coming Soon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Flow Overview ========== -->
+        <section class="showcase-flow section">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__tag">Flow</span>
+                    <h2 class="section__title">フローの全体像</h2>
+                </div>
+                <div class="showcase-flow__diagram animate-on-scroll">
+                    <div class="flow-step">
+                        <div class="flow-step__icon flow-step__icon--forms">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <div class="flow-step__content">
+                            <h3 class="flow-step__title">① 経費申請</h3>
+                            <p class="flow-step__desc">Microsoft Formsで<br />申請者が経費内容を入力・送信</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-step__icon flow-step__icon--pa">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <div class="flow-step__content">
+                            <h3 class="flow-step__title">② 自動承認リクエスト</h3>
+                            <p class="flow-step__desc">Power Automateが承認者に<br />申請内容と承認/却下ボタンを送信</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div class="flow-step flow-step--branch">
+                        <div class="flow-step__icon flow-step__icon--branch">
+                            <i data-lucide="git-branch"></i>
+                        </div>
+                        <div class="flow-step__content">
+                            <h3 class="flow-step__title">③ 条件分岐</h3>
+                            <p class="flow-step__desc">承認 or 却下の結果に応じて<br />後続の処理を自動振り分け</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow flow-arrow--split">
+                        <div class="flow-arrow__branch flow-arrow__branch--approve">
+                            <span class="flow-arrow__label flow-arrow__label--approve">✅ 承認</span>
+                        </div>
+                        <div class="flow-arrow__branch flow-arrow__branch--reject">
+                            <span class="flow-arrow__label flow-arrow__label--reject">❌ 却下</span>
+                        </div>
+                    </div>
+                    <div class="flow-step flow-step--final">
+                        <div class="flow-step__parallel">
+                            <div class="flow-step__parallel-item">
+                                <div class="flow-step__icon flow-step__icon--teams">
+                                    <i data-lucide="message-square"></i>
+                                </div>
+                                <div class="flow-step__content">
+                                    <h3 class="flow-step__title">④ Teams通知</h3>
+                                    <p class="flow-step__desc">結果を申請者・<br />関係者にリアルタイム通知</p>
+                                </div>
+                            </div>
+                            <div class="flow-step__parallel-item">
+                                <div class="flow-step__icon flow-step__icon--sp">
+                                    <i data-lucide="database"></i>
+                                </div>
+                                <div class="flow-step__content">
+                                    <h3 class="flow-step__title">⑤ 台帳記録</h3>
+                                    <p class="flow-step__desc">SharePointリストに<br />承認結果を自動記録・蓄積</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Details Section ========== -->
+        <section class="showcase-details section">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__tag">Details</span>
+                    <h2 class="section__title">使用サービスと構成</h2>
+                </div>
+                <div class="showcase-details__grid">
+                    <div class="detail-card animate-on-scroll">
+                        <div class="detail-card__icon detail-card__icon--forms">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h3 class="detail-card__title">Microsoft Forms</h3>
+                        <p class="detail-card__desc">
+                            申請者名・部署・経費項目・金額・利用日・目的を入力できる申請フォーム。
+                            スマホからも簡単に入力可能。
+                        </p>
+                    </div>
+                    <div class="detail-card animate-on-scroll">
+                        <div class="detail-card__icon detail-card__icon--pa">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3 class="detail-card__title">Power Automate</h3>
+                        <p class="detail-card__desc">
+                            Formsの送信をトリガーに、承認アクション・条件分岐・通知・データ記録を
+                            ノーコードで自動実行。
+                        </p>
+                    </div>
+                    <div class="detail-card animate-on-scroll">
+                        <div class="detail-card__icon detail-card__icon--teams">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <h3 class="detail-card__title">Microsoft Teams</h3>
+                        <p class="detail-card__desc">
+                            承認リクエストの受信と結果通知をTeams上でリアルタイムに。
+                            承認者はTeamsから直接承認/却下可能。
+                        </p>
+                    </div>
+                    <div class="detail-card animate-on-scroll">
+                        <div class="detail-card__icon detail-card__icon--sp">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3 class="detail-card__title">SharePoint</h3>
+                        <p class="detail-card__desc">
+                            承認結果をリストに自動蓄積。台帳として管理でき、
+                            後からのレポート作成や分析にも活用可能。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Point Section ========== -->
+        <section class="showcase-point section">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__tag">Key Point</span>
+                    <h2 class="section__title">このフローのポイント</h2>
+                </div>
+                <div class="showcase-point__list">
+                    <div class="point-item animate-on-scroll">
+                        <div class="point-item__number">01</div>
+                        <div class="point-item__content">
+                            <h3 class="point-item__title">ノーコードで構築</h3>
+                            <p class="point-item__desc">
+                                プログラミング不要。Power Automateのビジュアルデザイナーで、
+                                誰でもメンテナンスできる持続可能な仕組み。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="point-item animate-on-scroll">
+                        <div class="point-item__number">02</div>
+                        <div class="point-item__content">
+                            <h3 class="point-item__title">承認のボトルネック解消</h3>
+                            <p class="point-item__desc">
+                                紙やメールベースの承認フローでは発生しがちな「放置」を防止。
+                                承認者にリアルタイムで通知が届くため、処理スピードが向上。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="point-item animate-on-scroll">
+                        <div class="point-item__number">03</div>
+                        <div class="point-item__content">
+                            <h3 class="point-item__title">記録が自動で残る</h3>
+                            <p class="point-item__desc">
+                                申請→承認の履歴がSharePointに自動蓄積。
+                                「いつ・誰が・いくらの経費を申請して・誰が承認したか」が一目瞭然。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-home">
+            <a href="./index.html#works" class="btn btn--back">
+                <i data-lucide="home" class="btn__icon"></i>
+                TOPへ
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy" style="text-align: center;">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+    <script>
+        // Check if demo video exists, show/hide placeholder
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('demo-video');
+            const placeholder = document.getElementById('demo-placeholder');
+            if (video && placeholder) {
+                video.addEventListener('error', () => {
+                    video.style.display = 'none';
+                    placeholder.style.display = 'flex';
+                });
+                video.addEventListener('loadeddata', () => {
+                    placeholder.style.display = 'none';
+                    video.style.display = 'block';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -14,6 +14,7 @@ export default defineConfig({
                 alert: resolve(__dirname, 'case-alert.html'),
                 seat: resolve(__dirname, 'case-seat.html'),
                 profile: resolve(__dirname, 'profile-detail.html'),
+                showcaseExpense: resolve(__dirname, 'showcase-expense-approval.html'),
             },
         },
     },
